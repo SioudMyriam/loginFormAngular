@@ -1,0 +1,40 @@
+about page view
+
+
+<!--<label>test1</label>-->
+<!--<input type="number" ng-model="moyenne">-->
+<!--<span>{{result}}</span>-->
+<!--<br>-->
+<!--<span>{{date}}</span>-->
+<!--<br>-->
+
+<div class="form-group">
+  <label>Click to get photos</label>
+  <input class="form-control" type="text" ng-model="data">
+</div>
+
+<div class="row">
+  <div class="col-sm-6">
+    <input type="button" class="btn btn-info" ng-click="sendDataFromFactory(data)" value="get by id">
+    <li>
+      <strong>{{post2.id}}</strong>
+      <img src={{post2.thumbnailUrl}}>
+    </li>
+  </div>
+  <div class="col-sm-6">
+    <input type="button" class="btn btn-info" ng-click="sendAllDataFromFactory()" value="get all data">
+    <li ng-repeat="post in posts" ng-if="posts.length>0">
+      <strong>{{post.id}}</strong>
+      <img src={{post.thumbnailUrl}}>
+    </li>
+    <li>
+      <strong>{{posts.id}}</strong>
+      <img src={{posts.thumbnailUrl}}>
+    </li>
+  </div>
+</div>
+
+<div class="spinner">
+  <div class="double-bounce1"></div>
+  <div class="double-bounce2"></div>
+</div>

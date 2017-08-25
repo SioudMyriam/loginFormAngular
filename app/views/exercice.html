@@ -1,0 +1,29 @@
+<div class="row" ng-controller="exerciceController">
+  <h1 style="text-align: center">Exercice</h1>
+
+    <div class="col-sm-12" ng-repeat="image in images" style="margin-bottom: 10px">
+      <img style="border-radius: 50%" src={{image.thumbnailUrl}}
+           ng-click="showImage(image)">
+      <span>{{image.id}} / </span>
+      <span>{{image.title}}</span>
+    </div>
+</div>
+
+<div id="myImage" class="modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Votre Image est:</h3>
+      </div>
+      <div class="modal-body">
+        <img style="border-radius: 50%" src={{thumbnailUrl}}">
+        <span>{{id}} / </span>
+        <span>{{title}}</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="spinner">
+  <div class="double-bounce1"></div>
+  <div class="double-bounce2"></div>
+</div>
